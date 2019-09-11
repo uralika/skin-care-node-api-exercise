@@ -1,0 +1,16 @@
+{
+	"name": "skincare-api",
+	"version": "1.0.0",
+	"description": "Returns info on various skin care products.",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"author": "Anastasiya Sutyagina",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1",
+		"morgan": "^1.9.1",
+		"sqlite3": "^4.1.0"
+	}
+}
