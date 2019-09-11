@@ -21,6 +21,7 @@ app.get('/', (req, res, next) => {
 	res.redirect("/api/products");
 });
 
+// 3. Retrieve skin care products by category and ordered by rating
 app.get('/api/products', (req, res, next) => {
 	const filters = req.query.filters;
 	let sql = 'SELECT * FROM products';
@@ -42,7 +43,7 @@ app.get('/api/products', (req, res, next) => {
 	});
 });
 
-// 2. Retrieve details of 1 skincare product
+// 2. Retrieve details of 1 skin care product.
 app.get('/api/products/:id', (req, res, next) => {
 	const sql = 'SELECT * FROM products where id = ?',
 		params = [req.params.id];
@@ -57,6 +58,7 @@ app.get('/api/products/:id', (req, res, next) => {
 	});
 });
 
+// 1. Submit a new skin care product.
 app.post('/api/products', (req, res, next) => {
 	const reqBody = req.body;
 	let errors = [];
