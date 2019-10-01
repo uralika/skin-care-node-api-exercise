@@ -117,6 +117,8 @@ app.post('/api/products', (req, res, next) => {
 });
 
 // Default response for any other request
-app.use(function(req, res) {
-	res.status(404);
+app.use('*', (req, res) => {
+	res.send({
+		error: 'This is not a supported request.'
+	}).status(404).end();
 });

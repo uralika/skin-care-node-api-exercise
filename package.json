@@ -2,6 +2,7 @@
 	"name": "skincare-api",
 	"version": "1.0.0",
 	"description": "Returns info on various skin care products.",
+	"repository": "https://github.com/uralika/skin-care-node-api-exercise",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
